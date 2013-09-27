@@ -1,0 +1,39 @@
+// Ingreso diario en un cine.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+
+void main()
+{
+	int I, N, edad;
+		float precio, S, pago;
+		S=0;
+	cout<<"ingrese el num de butaca\n";
+	cin>>N;
+	cout<<"Ingrese costo\n";
+	cin>>precio;
+	   for(I=1; I<=N; I++)
+	   {
+		   do{cout<<"ingrese edad"; 
+		   cin>>edad;
+		   }
+		   while((edad<0)||(edad>150));
+		   if(edad <= 12)
+			   pago = precio*0.5;
+		   else
+			   if(edad<=55)
+				   pago = precio;
+			   else
+				   pago = precio*0.20;
+		   S = S+pago;
+	   }
+	   cout<<"El ingreso total es\n"; cout<<S;
+  getch();
+} 
+
